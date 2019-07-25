@@ -4,10 +4,12 @@
 #
 Name     : mvn-commons-pool
 Version  : 1.5.4
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar
 Source0  : https://repo1.maven.org/maven2/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar
 Source1  : https://repo1.maven.org/maven2/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.pom
+Source2  : https://repo1.maven.org/maven2/commons-pool/commons-pool/1.6/commons-pool-1.6.jar
+Source3  : https://repo1.maven.org/maven2/commons-pool/commons-pool/1.6/commons-pool-1.6.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -30,10 +32,16 @@ data components for the mvn-commons-pool package.
 
 %install
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/commons-pool/commons-pool/1.5.4
-cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/commons-pool/commons-pool/1.5.4
+cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/commons-pool/commons-pool/1.5.4
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/commons-pool/commons-pool/1.5.4
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/commons-pool/commons-pool/1.6
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/commons-pool/commons-pool/1.6/commons-pool-1.6.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/commons-pool/commons-pool/1.6
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/commons-pool/commons-pool/1.6/commons-pool-1.6.pom
 
 
 %files
@@ -43,3 +51,5 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/commons-pool/commons-po
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar
 /usr/share/java/.m2/repository/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.pom
+/usr/share/java/.m2/repository/commons-pool/commons-pool/1.6/commons-pool-1.6.jar
+/usr/share/java/.m2/repository/commons-pool/commons-pool/1.6/commons-pool-1.6.pom
